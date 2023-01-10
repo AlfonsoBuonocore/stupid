@@ -12,10 +12,17 @@
             <input type="text" name="insert" id="num"><br>
             <input type="button" value="invia" onclick="add()">
         </form>
+
+        <h1 id="id"></h1>
+
     </body>
     <script>
 
+        const e = document.getElementById("id");
+
 localStorage.setItem("num",1.075,5);
+
+        e.innerHTML(localStorage.getItem("num"));
 
 
         function add(){
@@ -23,6 +30,8 @@ localStorage.setItem("num",1.075,5);
             const c = document.getElementById("num").value;
 
             localStorage.setItem("num",localStorage.getItem("num")+c);
+
+            e.innerHTML(localStorage.getItem("num"));
     
         }
     </script>
