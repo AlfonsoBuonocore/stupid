@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="index.html" method="get">
+            <label for="insert">insert number</label><br>
+            <input type="text" name="insert" id="num"><br>
+            <input type="button" value="invia" onclick="add()">
+        </form>
+    </body>
+    <script>
+
+localStorage.setItem("num",1.075,5);
+
+
+        function add(){
+
+            const c = document.getElementById("num").value;
+
+            localStorage.setItem("num",localStorage.getItem("num")+c);
+    
+        }
+    </script>
+</html>
